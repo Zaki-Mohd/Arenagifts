@@ -2,10 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
+  max-width: 100vw;
+  overflow-x: hidden;
   font-family: var(--font-inter), sans-serif;
 }
 
 .font-display {
   font-family: var(--font-playfair), serif;
+}
+
+/* Force Instagram Embeds to be 100% fluid and responsive on mobile devices */
+.instagram-media,
+.instagram-media-rendered,
+iframe.instagram-media {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  display: block !important;
+  box-sizing: border-box !important;
+}
+
+/* Prevent horizontal overflow on small mobile viewports (e.g. 360px) */
+* {
+  box-sizing: border-box;
 }
